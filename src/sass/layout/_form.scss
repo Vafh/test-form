@@ -1,0 +1,270 @@
+.form {
+  padding: 40px 0;
+  font-family: 'Geometria';
+  color: var(--main-text-color);
+
+  &__wrapper {
+    // width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px 0 90px;
+  }
+
+  &__content {
+    width: 38%;
+  }
+
+  &__title {
+    color:  var(--bold-text-colour);
+    font-family: 'Geometria-ExtraBold';
+    font-size: 43px;
+    text-align: center;
+    margin-bottom: 13px;
+
+    &--margin {
+      margin-left: 50px;
+      margin-bottom: 7px;
+    }
+  }
+
+  &__subtitle {
+    margin-left: 50px;
+    margin-bottom: 25px;
+    font-family: 'Gilroy-Light';
+    font-size: 12px;
+    text-align: center;
+  }
+
+  &__action {
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  &__btn-wrapper {
+    margin-left: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    border: 1.5px solid var(--btn-bg-active);
+  }
+
+  &__btn {
+    font-family: 'Geometria-Bold';
+    font-family: 'Geometria';
+    font-size: 11px;
+    padding: 6px 10px;
+    background-color: #fff;
+
+    &--active {
+      color: var(--white-color);
+      background-color: var(--btn-bg-active);
+    }
+  }
+
+  &__btn-help {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 60px;
+    font-size: 14px;
+    font-family: 'Gilroy-ExtraBold';
+    color: var(--white-color);
+    background: var(--btn-help-bg-color);
+  }
+
+  &__help {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: linear-gradient(0deg, #E53656, #8969AE);
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    font-family: 'Geometria-Bold';
+    
+    &--margin {
+      margin-right: 10px;
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+    &--mini {
+      width: 47%;
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+    &--logo {
+      position: relative;
+      &::after {
+        content: '+ Логотип';
+        position: absolute;
+        top: 22px;
+        right: -63px;
+        color: var(--pseudo-element-color);
+      }
+    }
+  }
+  
+  &__label-wrapper {
+    display: flex;
+    align-items: center;
+  } 
+
+  &__input {
+    padding: 4px;
+    border-radius: 4px;
+    margin-top: 2px;
+    font-size: 13px;
+    background-color: var(--input-color);
+  }
+
+  &__form {
+    margin-bottom: 40px;
+  }
+
+  &__pay-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 45px 25px 90px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+  }
+
+  &__pay-text {
+    font-family: 'Geometria-Bold';
+    font-size: 10px;
+    margin-bottom: 3px;
+  }
+
+  &__pay-content {
+    width: 55%;
+  }
+
+  &__card-content {
+    width: 34%;
+  }
+}
+
+.helps-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px 0 100px;
+  margin-bottom: 15px;
+  position: relative;
+
+  &::after {
+    content: "/\\";
+    border: 2px solid white;
+    font-size: 12px;
+    color: var(--border-color);
+    position: absolute;
+    bottom: -17px;
+    left: 305px;
+  }
+  
+  &__img {
+    width: 55px;
+    padding-right: 21px;
+  }
+
+  &__img-wrapper {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 55px;
+    }
+  }
+
+  &__text {
+    font-family: 'Gilroy-ExtraBold';
+    font-size: 12px;
+
+    &--active {
+      color: var(--bold-text-colour);
+    }
+  }
+}
+
+.pay-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  &__item {
+    display: flex;
+    &:not(:last-child) {
+      margin-right: 12px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__img {
+    width: 117px;
+    height: 60px;
+  }
+}
+
+.card {
+  border-radius: 6px;
+  padding: 14px;
+  background-color: var(--card-bg-color);
+
+  &__text {
+    font-size: 11px;
+    font-family: 'Gilroy-ExtraBold';
+    color: var(--card-text-color);
+  }
+
+  &__number-wrapper {
+    &:not(:last-child){
+      margin-bottom: 18px;
+    }
+  }
+  
+  &__number {
+    display: flex;
+  }
+
+  &__input {
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 18px;
+    width: 30%;
+    
+    &:not(:last-child){
+      margin-right: 5px;
+    }
+
+    &--info {
+      width: 90%;
+    }
+  }
+
+  &__info-wrapper {
+    display: flex;
+  }
+
+  &__info {
+    width: 50%;
+
+    &:not(:last-child){
+      margin-right: 40px;
+    }
+  }
+}
