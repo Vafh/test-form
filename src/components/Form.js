@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import cn from 'classnames';
 // import s from './styles/contact-dealer.module.sass';
 
-import ICONS from "../assets/svg/index";
+import icons from "../assets/svg/index";
 import payPal from "../assets/images/payPal.jpg"
 import terminal from "../assets/images/terminal.jpg"
 import visa from "../assets/images/visa.jpg"
@@ -71,7 +71,7 @@ const Form = () => {
                   })} 
                     type="text"
                     autoComplete="off"
-                    className={cn('form__input', {['form__input--error']: errors?.firstName?.message === ''})}
+                    className={cn('form__input', {'form__input--error': errors?.firstName?.message === ''})}
                   />
                   {errors.firstName && errors.firstName.message}
                 </label>
@@ -87,7 +87,7 @@ const Form = () => {
                   })} 
                     type="text"
                     autoComplete="off"
-                    className={cn('form__input', { ['form__input--error']: errors?.lastName?.message === ''})}
+                    className={cn('form__input', { 'form__input--error': errors?.lastName?.message === ''})}
                   />
                   {errors.lastName && errors.lastName.message}
                 </label>
@@ -103,7 +103,7 @@ const Form = () => {
                   })}
                     type="text" 
                     autoComplete="off"
-                    className={cn('form__input', { ['form__input--error']: errors?.companyName?.message === ''})}
+                    className={cn('form__input', { 'form__input--error': errors?.companyName?.message === ''})}
                   />
                   {errors.companyName && errors.companyName.message}
                 </label>
@@ -113,13 +113,13 @@ const Form = () => {
                 <input {...register("email", { 
                     required: true, 
                     pattern: {
-                      value: /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                      value: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
                       message: "Please enter a valid email",
                     }, 
                   })}
                   type="text"
                   autoComplete="off"
-                  className={cn('form__input', { ['form__input--error']: errors?.email?.message === ''})}
+                  className={cn('form__input', { 'form__input--error': errors?.email?.message === ''})}
                 />
                 {errors.email && errors.email.message}
               </label>
@@ -129,13 +129,13 @@ const Form = () => {
                 <input {...register("tel", { 
                   required: true, 
                   pattern: {
-                    value: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im, 
+                    value: /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/im, 
                     message: "Please enter a valid telephone"
                   }, 
                 })}
                   type="number"
                   autoComplete="off"
-                  className={cn('form__input', { ['form__input--error']: errors?.tel?.message === ''})}
+                  className={cn('form__input', { 'form__input--error': errors?.tel?.message === ''})}
                 />
                 {errors.tel && errors.tel.message}
               </label>
@@ -154,7 +154,7 @@ const Form = () => {
                 })}
                   type="text"
                   autoComplete="off"
-                  className={cn('form__input', { ['form__input--error']: errors?.country?.message === ''})}
+                  className={cn('form__input', { 'form__input--error': errors?.country?.message === ''})}
                 />
                 {errors.country && errors.country.message}
               </label>
@@ -171,7 +171,7 @@ const Form = () => {
                   })}
                   type="text"
                   autoComplete="off"
-                  className={cn('form__input', { ['form__input--error']: errors?.city?.message === ''})}
+                  className={cn('form__input', { 'form__input--error': errors?.city?.message === ''})}
                   />
                   {errors.city && errors.city.message}
                 </label>
@@ -187,7 +187,7 @@ const Form = () => {
                   })}
                   type="text"
                   autoComplete="off"
-                  className={cn('form__input', { ['form__input--error']: errors?.state?.message === ''})}
+                  className={cn('form__input', { 'form__input--error': errors?.state?.message === ''})}
                   />
                   {errors.state && errors.state.message}
                 </label>
@@ -204,7 +204,7 @@ const Form = () => {
                 })}
                   type="text"
                   autoComplete="off"
-                  className={cn('form__input', { ['form__input--error']: errors?.address?.message === ''})}
+                  className={cn('form__input', { 'form__input--error': errors?.address?.message === ''})}
                 />
                 {errors.address && errors.address.message}
               </label>
@@ -221,7 +221,7 @@ const Form = () => {
                 })}
                   type="number"
                   autoComplete="off"
-                  className={cn('form__input', { ['form__input--error']: errors?.index?.message === ''})}
+                  className={cn('form__input', { 'form__input--error': errors?.index?.message === ''})}
                 />
                 {errors.index && errors.index.message}
               </label>
@@ -237,7 +237,7 @@ const Form = () => {
         <div className={`helps-list ${financialAid && "helps-list--after"}`}>
           <div className="helps-list__item">
             <div className="icon-box">
-              <ICONS.hand className="icon" />
+              <icons.hand className="icon" />
             </div>
 
             <p className="helps-list__text">Зробити</p>
@@ -247,21 +247,21 @@ const Form = () => {
             onClick={setFinancialAid}
           >
             <div className={`icon-box ${financialAid && "icon-box--active"}`}>
-              <ICONS.purse className="icon" />
+              <icons.purse className="icon" />
             </div>
 
               <p className= {`helps-list__text ${financialAid && "helps-list__text--active"} `}>Фінансова допомога</p>
           </div>
           <div className='helps-list__item'>
             <div className="icon-box">
-              <ICONS.clothes className="icon" />
+              <icons.clothes className="icon" />
             </div>
 
             <p className='helps-list__text'>Матеріальна допомога</p>
           </div>
           <div className='helps-list__item'>
             <div className="icon-box">
-              <ICONS.heard className="icon" />
+              <icons.heard className="icon" />
             </div>
 
             <p className='helps-list__text'>Волонтерство</p>
