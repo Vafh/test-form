@@ -1,14 +1,15 @@
 :root {
-  --main-text-color:#9CA2AB;
-  --white-color: #ffffff;
-  --input-color: #F3F7FA;
-  --bold-text-colour: #393E5F;
-  --btn-bg-active: #363B5D;
-  --border-color:#E3EBF3;
-  --btn-help-bg-color: linear-gradient(45deg, #E53656, #8969AE);
-  --pseudo-element-color:#599AE4;
-  --card-bg-color: #C5D5E6;
-  --card-text-color: #F9FAFC;
-  --duration-main: 250ms; //время для анимации текста
-  --timing-function-main: cubic-bezier(0.4, 0, 0.2, 1);
+  --primary-100: #ffffff;
+  --primary-200: #F3F7FA;
+  --primary-300: #393E5F;
+
+  --secondary-100:#E3EBF3;
+  --secondary-200: linear-gradient(45deg, #E53656, #8969AE);
+  --secondary-300:#599AE4;
+  --secondary-400: #aeb5bd;
+  --secondary-500: #F9FAFC;
+  --secondary-600: #aa63b1;
+  --secondary-700: #c1cad6;
+
+  --timing-function-main: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
